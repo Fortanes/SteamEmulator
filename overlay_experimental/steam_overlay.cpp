@@ -1351,7 +1351,13 @@ void Steam_Overlay::render_main_window()
         if (ImGui::Button(translationTestAchievement[current_language])) {
             show_test_achievement();
         }
-
+        
+        ImGui::SameLine();
+        // user clicked on "settings"
+        if (ImGui::Button(translationSettings[current_language])) {
+            show_settings = !show_settings;
+        }
+        
         ImGui::Spacing();
         ImGui::Spacing();
         ImGui::LabelText("##label", "%s", translationFriends[current_language]);
