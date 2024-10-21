@@ -43,7 +43,7 @@ struct File_Data {
 };
 
 
-std::string Local_Storage::saves_folder_name = "GSE Saves";
+std::string Local_Storage::saves_folder_name = "Steam Emulator Saves";
 
 
 #ifdef NO_DISK_WRITES
