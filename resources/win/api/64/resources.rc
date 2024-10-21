@@ -17,14 +17,14 @@ FILESUBTYPE    0x0L // VFT2_UNKNOWN
         BLOCK "040904b0" // language code = U.S. English, character-set identifier = Unicode
         {
             VALUE "LegalCopyright", "Copyright (C) 2007"
-            VALUE "InternalName", "GSE Client API (win64)"
+            VALUE "InternalName", "Steam Client API (win64)"
             VALUE "FileVersion", "08.33.09.23"
-            VALUE "CompanyName", "GSE"
+            VALUE "CompanyName", "Valve Corp."
             VALUE "ProductVersion", "01.00.00.01"
-            VALUE "FileDescription", "GSE Client API"
+            VALUE "FileDescription", "Steam Client API"
             VALUE "Source Control ID", "8330923"
             VALUE "OriginalFilename", "steam_api.dll"
-            VALUE "ProductName", "GSE Client API"
+            VALUE "ProductName", "Steam Client API"
         }
     }
 
@@ -52,13 +52,13 @@ FILESUBTYPE    0x0L // VFT2_UNKNOWN
     {
         BLOCK "040904b0" // language code = U.S. English, character-set identifier = Unicode
         {
-            VALUE "CompanyName", "GSE"
-            VALUE "FileDescription", "GSE Client API"
+            VALUE "CompanyName", "Valve Corp."
+            VALUE "FileDescription", "Steam Client API"
             VALUE "FileVersion", "1, 0, 0, 1"
-            VALUE "InternalName", "GSE Client API"
+            VALUE "InternalName", "Steam Client API"
             VALUE "LegalCopyright", "Copyright (C) 2007"
             VALUE "OriginalFilename", "steam_api.dll"
-            VALUE "ProductName", "GSE Client API"
+            VALUE "ProductName", "Steam Client API"
             VALUE "ProductVersion", "1, 0, 0, 1"
         }
     }
