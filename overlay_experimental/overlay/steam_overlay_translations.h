@@ -3,6 +3,101 @@ const int TRANSLATION_NUMBER_OF_LANGUAGES = 31;
 const int TRANSLATION_BUFFER_SIZE = 256;
 
 // C:\Program Files (x86)\Steam\tenfoot\resource\localization\tenfoot_*.txt
+// SettingsInGame_Enable & SettingsInGame_Overlay
+const char translationSteamOverlay[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_SIZE] = {
+	// 0 - English
+  u8"Steam Overlay",
+
+	// 1 - Arabic
+  u8"Steam Overlay",
+
+	// 2 - Bulgarian
+  u8"Steam слой",
+
+	// 3 - Simplified Chinese
+	u8"Steam 界面",
+
+	// 4 - Traditional Chinese
+  u8"Steam 內嵌介面",
+
+	// 5 - Czech
+  u8"Překrytí služby Steam",
+
+	// 6 - Danish
+  u8"Steam-overlayet",
+
+	// 7 - Dutch
+  u8"Steam-overlay",
+
+	// 8 - Finnish
+  u8"Steam-yhteisönäkymä",
+
+	// 9 - French
+  u8"L'overlay Steam",
+
+	// 10 - German
+  u8"Steam Overlay",
+
+	// 11 - Greek
+  u8"Επικάλυψης Steam",
+
+	// 12 - Hungarian
+  u8"Steam Átfedés",
+
+	// 13 - Italian
+  u8"L'Overlay di Steam",
+
+	// 14 - Japanese
+  u8"Steam オーバーレイ",
+
+	// 15 - Korean
+  u8"Steam 오버레이",
+
+	// 16 - Norwegian
+  u8"Steam-overlegg",
+
+	// 17 - Polish
+  u8"Nakładkę Steam",
+
+	// 18 - Portuguese
+  u8"Painel Steam",
+
+	// 19 - Brazilian Portuguese
+  u8"Painel Steam",
+
+	// 20 - Romanian
+  u8"Interfață suplimentară Steam",
+
+	// 21 - Russian
+  u8"Оверлей Steam",
+
+	// 22 - Spanish
+  u8"Interfaz de Steam",
+
+	// 23 - Latin American
+  u8"Interfaz de Steam",
+
+	// 24 - Swedish
+  u8"Steams överlägg",
+
+	// 25 - Thai
+  u8"โอเวอร์เลย์ Steam",
+
+	// 26 - Turkish
+  u8"Steam Öykünücüsü Oyun İçi Arayüzü",
+
+	// 27 - Ukrainian
+  u8"Оверлей Steam",
+
+	// 28 - Vietnamese
+  u8"Lớp phủ Steam",
+
+	// 29 - Croatian
+  u8"Steam Overlay"
+
+};
+
+// C:\Program Files (x86)\Steam\tenfoot\resource\localization\tenfoot_*.txt
 // Friends_Indicator_Chat
 const char translationChat[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_SIZE] = {
 	// 0 - English
@@ -98,102 +193,6 @@ const char translationChat[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_S
   // 30 - Indonesian
   u8"Chat",
 
-};
-
-const char translationCopyId[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_SIZE] = {
-	// 0 - English
-  u8"Copy ID",
-
-	// 1 - Arabic
-  u8"Copy ID",
-
-	// 2 - Bulgarian
-  u8"Copy ID",
-
-	// 3 - Simplified Chinese
-  u8"复制 ID",
-
-	// 4 - Traditional Chinese
-  u8"複製 ID",
-
-	// 5 - Czech
-  u8"Kopírovat ID",
-
-	// 6 - Danish
-  u8"Copy ID",
-
-	// 7 - Dutch
-  u8"Copy ID",
-
-	// 8 - Finnish
-  u8"Copy ID",
-
-	// 9 - French
-  u8"Copy ID",
-
-	// 10 - German
-  u8"Copy ID",
-
-	// 11 - Greek
-  u8"Copy ID",
-
-	// 12 - Hungarian
-  u8"Copy ID",
-
-	// 13 - Italian
-  u8"Copy ID",
-
-	// 14 - Japanese
-  u8"Copy ID",
-
-	// 15 - Korean
-  u8"Copy ID",
-
-	// 16 - Norwegian
-  u8"Copy ID",
-
-	// 17 - Polish
-  u8"Copy ID",
-
-	// 18 - Portuguese
-  u8"Copy ID",
-
-	// 19 - Brazilian Portuguese
-  u8"Copiar ID",
-
-	// 20 - Romanian
-  u8"Copy ID",
-
-	// 21 - Russian
-  u8"Copy ID",
-
-	// 22 - Spanish
-  u8"Copy ID",
-
-	// 23 - Latin American
-  u8"Copy ID",
-
-	// 24 - Swedish
-  u8"Copy ID",
-
-	// 25 - Thai
-  u8"Copy ID",
-
-	// 26 - Turkish
-  u8"ID'yi Kopyala",
-
-	// 27 - Ukrainian
-  u8"Copy ID",
-
-	// 28 - Vietnamese
-  u8"Copy ID",
-
-	// 29 - Croatian
-  u8"Copy ID",
-  
-  // 30 - Indonesian
-  u8"Copy ID",
-  
 };
 
 const char translationTestAchievement[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_SIZE] = {
@@ -1165,102 +1164,6 @@ const char translationRenderer[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFF
   
   // 30 - Indonesian
   u8"Renderer: %s",
-  
-};
-
-const char translationToggleUserInfo[TRANSLATION_NUMBER_OF_LANGUAGES][TRANSLATION_BUFFER_SIZE] = {
-	// 0 - English
-  u8"Toggle User Info",
-
-	// 1 - Arabic
-  u8"Toggle User Info",
-
-	// 2 - Bulgarian
-  u8"Toggle User Info",
-
-	// 3 - Simplified Chinese
-  u8"显示/隐藏用户信息",
-
-	// 4 - Traditional Chinese
-  u8"顯示/隱藏使用者資訊",
-
-	// 5 - Czech
-  u8"Toggle User Info",
-
-	// 6 - Danish
-  u8"Toggle User Info",
-
-	// 7 - Dutch
-  u8"Toggle User Info",
-
-	// 8 - Finnish
-  u8"Toggle User Info",
-
-	// 9 - French
-  u8"Toggle User Info",
-
-	// 10 - German
-  u8"Toggle User Info",
-
-	// 11 - Greek
-  u8"Toggle User Info",
-
-	// 12 - Hungarian
-  u8"Toggle User Info",
-
-	// 13 - Italian
-  u8"Toggle User Info",
-
-	// 14 - Japanese
-  u8"Toggle User Info",
-
-	// 15 - Korean
-  u8"Toggle User Info",
-
-	// 16 - Norwegian
-  u8"Toggle User Info",
-
-	// 17 - Polish
-  u8"Toggle User Info",
-
-	// 18 - Portuguese
-  u8"Toggle User Info",
-
-	// 19 - Brazilian Portuguese
-  u8"Toggle User Info",
-
-	// 20 - Romanian
-  u8"Toggle User Info",
-
-	// 21 - Russian
-  u8"Toggle User Info",
-
-	// 22 - Spanish
-  u8"Toggle User Info",
-
-	// 23 - Latin American
-  u8"Toggle User Info",
-
-	// 24 - Swedish
-  u8"Toggle User Info",
-
-	// 25 - Thai
-  u8"Toggle User Info",
-
-	// 26 - Turkish
-  u8"Toggle User Info",
-
-	// 27 - Ukrainian
-  u8"Toggle User Info",
-
-	// 28 - Vietnamese
-  u8"Toggle User Info",
-
-	// 29 - Croatian
-  u8"Toggle User Info",
-  
-  // 30 - Indonesian
-  u8"Toggle User Info",
   
 };
 
