@@ -73,14 +73,14 @@ def generate_stats_achievements(
     for out_ach in output_ach:
         icon = out_ach.get("icon", None)
         if icon:
-            out_ach["icon"] = f"img/{icon}"
+            out_ach["icon"] = f"achievement_images/{icon}"
         else:
             out_ach["icon"] = r'img/steam_default_icon_unlocked.jpg'
             copy_default_unlocked_img = True
 
         icon_gray = out_ach.get("icon_gray", None)
         if icon_gray:
-            out_ach["icon_gray"] = f"img/{icon_gray}"
+            out_ach["icon_gray"] = f"achievement_images/{icon_gray}"
         else:
             out_ach["icon_gray"] = r'img/steam_default_icon_locked.jpg'
             copy_default_locked_img = True
