@@ -210,7 +210,7 @@ static inline void reset_LastError()
 #define CLIENT_HSTEAMUSER 1
 #define SERVER_HSTEAMUSER 1
 
-#define DEFAULT_NAME "gse orca"
+#define DEFAULT_NAME "Default Account Name"
 #define DEFAULT_LANGUAGE "english"
 #define DEFAULT_IP_COUNTRY "US"
 
