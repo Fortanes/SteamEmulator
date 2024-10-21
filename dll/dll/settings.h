@@ -128,9 +128,9 @@ struct Overlay_Appearance {
     float font_glyph_extra_spacing_x = 0.0f;
     float font_glyph_extra_spacing_y = 0.0f;
 
-    float notification_r = 0.16f;
-    float notification_g = 0.29f;
-    float notification_b = 0.48f;
+    float notification_r = 0.12f;
+    float notification_g = 0.12f;
+    float notification_b = 0.12f;
     float notification_a = 1.0f;
 
     float notification_rounding = 0.0f; // corners roundness for all notifications
@@ -150,20 +150,20 @@ struct Overlay_Appearance {
     float background_b = -1.0f;
     float background_a = -1.0f;
 
-    float element_r = -1.0f;
-    float element_g = -1.0f;
-    float element_b = -1.0f;
-    float element_a = -1.0f;
+    float element_r = 0.2f;
+    float element_g = 0.2f;
+    float element_b = 0.2f;
+    float element_a = 1.0f;
 
-    float element_hovered_r = -1.0f;
-    float element_hovered_g = -1.0f;
-    float element_hovered_b = -1.0f;
-    float element_hovered_a = -1.0f;
+    float element_hovered_r = 0.28f;
+    float element_hovered_g = 0.28f;
+    float element_hovered_b = 0.28f;
+    float element_hovered_a = 1.0f;
 
-    float element_active_r = -1.0f;
-    float element_active_g = -1.0f;
-    float element_active_b = -1.0f;
-    float element_active_a = -1.0f;
+    float element_active_r = 0.16f;
+    float element_active_g = 0.16f;
+    float element_active_b = 0.16f;
+    float element_active_a = 1.0f;
 
     NotificationPosition ach_earned_pos = NotificationPosition::bot_right; // achievement earned
     NotificationPosition invite_pos = default_pos; // lobby/game invitation
