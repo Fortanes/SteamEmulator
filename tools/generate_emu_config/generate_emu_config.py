@@ -399,7 +399,7 @@ def generate_achievement_stats(client, game_id : int, output_directory, backup_d
         print(f"[X] app id {game_id} has not achievements")
         return []
 
-    achievement_images_dir = os.path.join(output_directory, "img")
+    achievement_images_dir = os.path.join(output_directory, "achievement_images")
     images_to_download : set[str] = set()
     
     with open(os.path.join(backup_directory, f'UserGameStatsSchema_{game_id}.bin'), 'wb') as f:
