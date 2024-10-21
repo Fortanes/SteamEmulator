@@ -1319,8 +1319,6 @@ void Steam_Overlay::render_main_window()
     char tmp[TRANSLATION_BUFFER_SIZE]{};
     snprintf(tmp, sizeof(tmp), translationRenderer[current_language], (_renderer == nullptr ? "Unknown" : _renderer->GetLibraryName().c_str()));
     std::string windowTitle{};
-    // Note: don't translate this, project and author names are nouns, they must be kept intact for proper referral
-    // think of it as translating "Protobuf - Google"
     windowTitle.append(translationSteamOverlay[current_language]).append(" (").append(tmp).append(")");
 
     bool show = true;
