@@ -20,8 +20,6 @@
 
 // translation
 #include "overlay/steam_overlay_translations.h"
-// fonts
-#include "fonts/unifont.hpp"
 // builtin audio
 #include "overlay/notification.h"
 
@@ -250,7 +248,6 @@ void Steam_Overlay::create_fonts()
     }
     for (int i = 0; i < TRANSLATION_NUMBER_OF_LANGUAGES; i++) {
         font_builder.AddText(translationChat[i]);
-        font_builder.AddText(translationCopyId[i]);
         font_builder.AddText(translationTestAchievement[i]);
         font_builder.AddText(translationInvite[i]);
         font_builder.AddText(translationInviteAll[i]);
@@ -259,6 +256,7 @@ void Steam_Overlay::create_fonts()
         font_builder.AddText(translationAccept[i]);
         font_builder.AddText(translationRefuse[i]);
         font_builder.AddText(translationSend[i]);
+        font_builder.AddText(translationSteamOverlay[i]);
         font_builder.AddText(translationUserPlaying[i]);
         font_builder.AddText(translationRenderer[i]);
         font_builder.AddText(translationShowAchievements[i]);
@@ -294,9 +292,8 @@ void Steam_Overlay::create_fonts()
         fonts_atlas.AddFontFromFileTTF(settings->overlay_appearance.font_override.c_str(), font_size, &font_cfg);
         font_cfg.MergeMode = true; // merge next fonts into the first one, as if they were all just 1 font file
     }
-
-    // note: base85 compressed arrays caused a compiler heap allocation error, regular compression is more guaranteed
-    ImFont *font = fonts_atlas.AddFontFromMemoryCompressedTTF(unifont_compressed_data, unifont_compressed_size, font_size, &font_cfg);
+    
+    ImFont *font = fonts_atlas.AddFontFromFileTTF("C:\\Windows\\Fonts\\micross.ttf", font_size, &font_cfg);
     font_notif = font_default = font;
     
     bool res = fonts_atlas.Build();
@@ -660,12 +657,7 @@ void Steam_Overlay::build_friend_context_menu(Friend const& frd, friend_window_s
             close_popup = true;
             state.window_state |= window_state_show;
         }
-        // user clicked on "copy id" on a friend
-        if (ImGui::Button(translationCopyId[current_language])) {
-            close_popup = true;
-            auto friend_id_str = std::to_string(frd.id());
-            ImGui::SetClipboardText(friend_id_str.c_str());
-        }
+        
         // If we have the same appid, activate the invite/join buttons
         if (settings->get_local_game_id().AppID() == frd.appid()) {
             // user clicked on "invite to game"
@@ -1329,7 +1321,7 @@ void Steam_Overlay::render_main_window()
     std::string windowTitle{};
     // Note: don't translate this, project and author names are nouns, they must be kept intact for proper referral
     // think of it as translating "Protobuf - Google"
-    windowTitle.append("Ingame Overlay project - Nemirtingas (").append(tmp).append(")");
+    windowTitle.append(translationSteamOverlay[current_language]).append(" (").append(tmp).append(")");
 
     bool show = true;
 
@@ -1342,23 +1334,15 @@ void Steam_Overlay::render_main_window()
     ImGui::SetNextWindowSize({ io.DisplaySize.x, io.DisplaySize.y });
     if (ImGui::Begin(windowTitle.c_str(), &show,
             ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse |
-            ImGuiWindowFlags_NoBringToFrontOnFocus)) {
-        if (show_user_info) {
-            ImGui::LabelText("##playinglabel", translationUserPlaying[current_language],
-                settings->get_local_name(),
-                settings->get_local_steam_id().ConvertToUint64(),
-                settings->get_local_game_id().AppID());
-        }
-
-        ImGui::Spacing();
+            ImGuiWindowFlags_NoBringToFrontOnFocus)) 
+    {
+        ImGui::LabelText("##playinglabel", translationUserPlaying[current_language],
+            settings->get_local_name(),
+            settings->get_local_steam_id().ConvertToUint64(),
+            settings->get_local_game_id().AppID());
         
         ImGui::SameLine();
-        // user clicked on "toggle user info"
-        if (ImGui::Button(translationToggleUserInfo[current_language])) {
-            show_user_info = !show_user_info;
-        }
-
-        ImGui::SameLine();
+        ImGui::Spacing();
         // user clicked on "show achievements"
         if (ImGui::Button(translationShowAchievements[current_language])) {
             show_achievements = !show_achievements;
@@ -1370,19 +1354,6 @@ void Steam_Overlay::render_main_window()
             show_test_achievement();
         }
 
-        ImGui::SameLine();
-        // user clicked on "copy id" on themselves
-        if (ImGui::Button(translationCopyId[current_language])) {
-            auto friend_id_str = std::to_string(settings->get_local_steam_id().ConvertToUint64());
-            ImGui::SetClipboardText(friend_id_str.c_str());
-        }
-
-        ImGui::SameLine();
-        // user clicked on "settings"
-        if (ImGui::Button(translationSettings[current_language])) {
-            show_settings = !show_settings;
-        }
-        
         ImGui::Spacing();
         ImGui::Spacing();
         ImGui::LabelText("##label", "%s", translationFriends[current_language]);
