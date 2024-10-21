@@ -55,7 +55,7 @@ FILESUBTYPE    0x0L // VFT2_UNKNOWN
             VALUE "CompanyName",       "Valve Corp."
             VALUE "FileDescription",   "Steam"
             VALUE "FileVersion",       "1, 0, 0, 2"
-            VALUE "InternalName",      "GSE"
+            VALUE "InternalName",      "Steam"
             VALUE "LegalCopyright",    "Copyright (C) 2021 Valve Corporation"
             VALUE "OriginalFilename",  "steam.exe"
             VALUE "ProductName",       "Steam"
