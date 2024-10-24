@@ -640,7 +640,7 @@ static std::set<std::string> parse_supported_languages(class Local_Storage *loca
     std::ifstream input( std::filesystem::u8path(lang_config_path) );
 
     std::string first_language{};
-    supported_languages.insert(language)
+    supported_languages.insert(language);
     PRINT_DEBUG("Emu language '%s' added", language.c_str());
     if (input.is_open()) {
         common_helpers::consume_bom(input);
