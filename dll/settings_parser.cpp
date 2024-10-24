@@ -640,6 +640,8 @@ static std::set<std::string> parse_supported_languages(class Local_Storage *loca
     std::ifstream input( std::filesystem::u8path(lang_config_path) );
 
     std::string first_language{};
+    supported_languages.insert(language)
+    PRINT_DEBUG("Emu language '%s' added", language.c_str());
     if (input.is_open()) {
         common_helpers::consume_bom(input);
         for( std::string line; getline( input, line ); ) {
@@ -657,17 +659,6 @@ static std::set<std::string> parse_supported_languages(class Local_Storage *loca
                 supported_languages.insert(lang);
                 PRINT_DEBUG("Added supported_language %s", lang.c_str());
             } catch (...) {}
-        }
-    }
-
-    // if the current emu language is not in the supported languages list
-    if (!supported_languages.count(language)) {
-        if (first_language.size()) { // get the first supported language if the list wasn't empty
-            PRINT_DEBUG("[?] Your language '%s' isn't found in supported_languages.txt, using '%s' instead", language.c_str(), first_language.c_str());
-            language = first_language;
-        } else { // otherwise just lie and add it then!
-            supported_languages.insert(language);
-            PRINT_DEBUG("Forced current language '%s' into supported_languages", language.c_str());
         }
     }
 
